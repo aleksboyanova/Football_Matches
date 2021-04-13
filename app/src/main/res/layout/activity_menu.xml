@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background3"
+    tools:context=".menu.MenuActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="82dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="20dp">
+
+            <ImageView
+                android:layout_width="83dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:foregroundGravity="center_vertical|center|center_horizontal"
+                android:src="@drawable/footballlogo4" />
+
+            <TextView
+                android:id="@+id/menuTextView"
+                android:layout_width="83dp"
+                android:layout_height="match_parent"
+                android:gravity="center|center_horizontal"
+                android:text="Menu"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+        </RelativeLayout>
+
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:columnOrderPreserved="false"
+            android:rowCount="6">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/resultsCardView"
+                android:layout_width="76dp"
+                android:layout_height="163dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="157dp"
+                    android:layout_height="143dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="83dp"
+                        android:layout_height="63dp"
+                        android:layout_gravity="center"
+                        android:foregroundGravity="center"
+                        android:src="@drawable/results" />
+
+                    <Button
+                        android:id="@+id/resultsButton"
+                        style="@style/loginButton"
+                        android:layout_width="125dp"
+                        android:layout_height="26dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center|center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:foregroundGravity="center|center_horizontal"
+                        android:gravity="center|center_horizontal"
+                        android:text="Matches Results"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/teamsCardView"
+                android:layout_width="110dp"
+                android:layout_height="154dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="153dp"
+                    android:layout_height="143dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="83dp"
+                        android:layout_height="63dp"
+                        android:src="@drawable/teamslogo" />
+
+                    <Button
+                        android:id="@+id/teamsBtn"
+                        style="@style/loginButton"
+                        android:layout_width="121dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="center|center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:foregroundGravity="center|center_horizontal"
+                        android:gravity="center|center_horizontal"
+                        android:text="Teams"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        app:layout_anchorGravity="bottom|center" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/playersCardView"
+                android:layout_width="136dp"
+                android:layout_height="166dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="153dp"
+                    android:layout_height="143dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="83dp"
+                        android:layout_height="63dp"
+                        android:src="@drawable/players" />
+
+                    <Button
+                        android:id="@+id/playersBtn"
+                        style="@style/loginButton"
+                        android:layout_width="121dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="center|center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:foregroundGravity="center|center_horizontal"
+                        android:gravity="center|center_horizontal"
+                        android:text="Players"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/friendlyMCardView"
+                android:layout_width="136dp"
+                android:layout_height="166dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="157dp"
+                    android:layout_height="143dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="83dp"
+                        android:layout_height="63dp"
+                        android:src="@drawable/matches" />
+
+                    <Button
+                        android:id="@+id/friendlyMatchesButton"
+                        style="@style/loginButton"
+                        android:layout_width="125dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="center|center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:foregroundGravity="center|center_horizontal"
+                        android:gravity="center|center_horizontal"
+                        android:text="Friendly Matches"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/championshipCardView"
+                android:layout_width="136dp"
+                android:layout_height="166dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="157dp"
+                    android:layout_height="143dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="83dp"
+                        android:layout_height="63dp"
+                        android:src="@drawable/champlogo" />
+
+                    <Button
+                        android:id="@+id/championshipButton"
+                        style="@style/loginButton"
+                        android:layout_width="125dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="center|center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:foregroundGravity="center|center_horizontal"
+                        android:gravity="center|center_horizontal"
+                        android:text="Championship"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/refereesCardView"
+                android:layout_width="136dp"
+                android:layout_height="166dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="153dp"
+                    android:layout_height="143dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="83dp"
+                        android:layout_height="63dp"
+                        android:src="@drawable/refereelogo" />
+
+                    <Button
+                        android:id="@+id/refereesBtn"
+                        style="@style/loginButton"
+                        android:layout_width="125dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="center|center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:foregroundGravity="center|center_horizontal"
+                        android:gravity="center|center_horizontal"
+                        android:text="Referees"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/updateMyTeamCardView"
+                android:layout_width="136dp"
+                android:layout_height="166dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="157dp"
+                    android:layout_height="143dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="83dp"
+                        android:layout_height="63dp"
+                        android:src="@drawable/update" />
+
+                    <Button
+                        android:id="@+id/updateMyTeamBtn"
+                        style="@style/loginButton"
+                        android:layout_width="125dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="center|center_horizontal"
+                        android:layout_marginTop="12dp"
+                        android:foregroundGravity="center|center_horizontal"
+                        android:gravity="center|center_horizontal"
+                        android:text="Update My Team"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/addChampCardView"
+                android:layout_width="136dp"
+                android:layout_height="166dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="157dp"
+                    android:layout_height="143dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="83dp"
+                        android:layout_height="63dp"
+                        android:src="@drawable/signupforleague" />
+
+                    <Button
+                        android:id="@+id/addChampionshipBtn"
+                        style="@style/loginButton"
+                        android:layout_width="125dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="center|center_horizontal"
+                        android:layout_marginTop="12dp"
+                        android:foregroundGravity="center|center_horizontal"
+                        android:gravity="center|center_horizontal"
+                        android:text="Football League"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/myTeamCardView"
+                android:layout_width="136dp"
+                android:layout_height="166dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="153dp"
+                    android:layout_height="143dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="83dp"
+                        android:layout_height="63dp"
+                        android:src="@drawable/myteam" />
+
+                    <Button
+                        android:id="@+id/myTeamBtn"
+                        style="@style/loginButton"
+                        android:layout_width="121dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="center|center_horizontal"
+                        android:layout_marginTop="12dp"
+                        android:foregroundGravity="center|center_horizontal"
+                        android:gravity="center|center_horizontal"
+                        android:text="My Team"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/updateMatchCardView"
+                android:layout_width="136dp"
+                android:layout_height="166dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="157dp"
+                    android:layout_height="143dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="83dp"
+                        android:layout_height="63dp"
+                        android:src="@drawable/update" />
+
+                    <Button
+                        android:id="@+id/updateMatchBtn"
+                        style="@style/loginButton"
+                        android:layout_width="125dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="center|center_horizontal"
+                        android:layout_marginTop="12dp"
+                        android:foregroundGravity="center|center_horizontal"
+                        android:gravity="center|center_horizontal"
+                        android:text="Update Match"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/logoutCardView"
+                android:layout_width="136dp"
+                android:layout_height="166dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="153dp"
+                    android:layout_height="143dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="83dp"
+                        android:layout_height="63dp"
+                        android:src="@drawable/logoutgreen" />
+
+                    <Button
+                        android:id="@+id/logoutBtn"
+                        style="@style/loginButton"
+                        android:layout_width="121dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="center|center_horizontal"
+                        android:layout_marginTop="12dp"
+                        android:foregroundGravity="center|center_horizontal"
+                        android:gravity="center|center_horizontal"
+                        android:text="Log out"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </GridLayout>
+
+    </LinearLayout>
+
+</ScrollView>

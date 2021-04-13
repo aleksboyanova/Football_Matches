@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menu.RegisterActivity"
+    android:background="@color/register_bk_color"
+    android:focusableInTouchMode="true"
+    android:gravity="center"
+    android:layout_gravity="center">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:layout_marginTop="30dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/frMatchCardView"
+                android:layout_width="344dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                app:cardBackgroundColor="@color/whiteTextColor"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="330dp"
+                    android:layout_height="560dp"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputUsername"
+                        style="@style/parent"
+                        android:layout_marginTop="@dimen/loginViewsMargin">
+
+                        <TextView
+                            android:id="@+id/organizeMatchText"
+                            style="@style/modifiedEditText"
+                            android:gravity="center|center_horizontal"
+                            android:inputType="textPersonName"
+                            android:maxLines="1"
+                            android:text="Organize a match:"
+                            android:textColor="#000000"
+                            android:textSize="24sp"
+                            android:textStyle="italic" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/firstTeamNameText"
+                        android:layout_width="fill_parent"
+                        android:drawableLeft="@drawable/footballplayers"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dip"
+                        android:layout_marginBottom="10dp"
+                        android:drawablePadding="15dp"
+                        android:text="My Team:" />
+
+                    <!-- Spinner Element -->
+                    <Spinner
+                        android:id="@+id/firstSpinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+
+
+                    <TextView
+                        android:id="@+id/secondTeamNameText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/footballplayers"
+                        android:layout_marginTop="20dip"
+                        android:layout_marginBottom="10dp"
+                        android:drawablePadding="15dp"
+                        android:text="Second Team:" />
+
+                    <!-- Spinner Element -->
+                    <Spinner
+                        android:id="@+id/secondSpinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/refereeTextView3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/referee9"
+                        android:layout_marginTop="20dip"
+                        android:layout_marginBottom="10dp"
+                        android:drawablePadding="15dp"
+                        android:text="Referee:" />
+
+                    <!-- Spinner Element -->
+                    <Spinner
+                        android:id="@+id/refereeSpinner3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textDate"
+                        style="@style/parent"
+                        android:layout_marginTop="@dimen/loginViewsMargin">
+
+                        <EditText
+                            android:id="@+id/dateView"
+                            style="@style/modifiedEditText"
+                            android:ems="10"
+                            android:drawableLeft="@drawable/calendar"
+                            android:drawablePadding="15dp"
+                            android:hint="Date" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textPlace"
+                        style="@style/parent"
+                        android:layout_marginTop="@dimen/loginViewsMargin">
+
+                        <EditText
+                            android:id="@+id/placeView"
+                            style="@style/modifiedEditText"
+                            android:drawablePadding="15dp"
+                            android:hint="Place"
+                            android:drawableLeft="@drawable/place"
+                            android:inputType="textPersonName"
+                            android:maxLines="1" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textHour"
+                        style="@style/parent"
+                        android:layout_marginTop="@dimen/loginViewsMargin">
+
+                        <EditText
+                            android:id="@+id/hourView"
+                            style="@style/modifiedEditText"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:drawableLeft="@drawable/time"
+                            android:drawablePadding="15dp"
+                            android:hint="Hour" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
+                        android:id="@+id/createMatchBtn"
+                        style="@style/loginButton"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|center_horizontal"
+                        android:layout_marginTop="25dp"
+                        android:gravity="center|center_horizontal"
+                        android:text="Create"
+                        app:initialCornerAngle="27dp"
+                        app:spinning_bar_color="#FFF"
+                        app:spinning_bar_padding="6dp"
+                        app:spinning_bar_width="4dp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="12"
+                android:gravity="center"
+                android:layout_marginTop="30dp">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:background="@color/whiteTextColor"
+                    android:layout_weight="3"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:background="@color/whiteTextColor"
+                    android:layout_weight="3"/>
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+    <View
+        android:layout_marginTop="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="11dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_side_bg"/>
+    <ImageView
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back_img"
+        android:layout_marginRight="11dp"
+        android:layout_marginBottom="30dp"
+        android:adjustViewBounds="false"
+        android:onClick="onMenuClick"
+        tools:ignore="OnClick" />
+</RelativeLayout>

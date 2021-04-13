@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.footballmatch">
+    <!-- permission -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Football Match"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activities.NavigationActivity"
+            android:label="@string/title_activity_navigation"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activities.AddChampionshipActivity"
+            android:label="@string/add_champ"/>
+        <activity android:name=".activities.NoActionbar" />
+        <activity android:name=".activities.UpdateMatchActivity"
+            android:label="@string/update_match"/>
+        <activity android:name=".activities.TeamDetailsActivity"
+            android:label="@string/team_details"/>
+        <activity android:name=".activities.PlayerMyTeamActivity"
+            android:label="@string/my_team"/>
+        <activity
+            android:name=".activities.SixteenTeamsTournamentActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activities.EightTeamsTournamentActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="landscape" />
+        <activity android:name=".activities.FootballLeagueActivity"
+            android:label="@string/football_league"/>
+        <activity
+            android:name=".menu.RegisterActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="@string/register"/>
+        <activity android:name=".menu.MenuActivity" />
+        <activity android:name=".activities.TeamsActivity"
+            android:label="@string/teams"
+            android:parentActivityName=".menu.MenuActivity"/>
+        <activity android:name=".activities.RefereesActivity"
+            android:label="@string/referees"
+            android:parentActivityName=".menu.MenuActivity"/>
+        <activity android:name=".activities.PlayersActivity"
+            android:label="@string/players"
+            android:parentActivityName=".menu.MenuActivity"/>
+        <activity android:name=".activities.MyTeamActivity"
+            android:label="@string/update_my_team"/>
+        <activity android:name=".activities.MatchesResultsActivity"
+            android:label="@string/matches_results"
+            android:parentActivityName=".menu.MenuActivity"/>
+        <activity android:name=".activities.FriendlyMatchesActivity"
+            android:label="@string/friendly_matches"/>
+        <activity android:name=".activities.ChampionshipActivity"
+            android:label="@string/champ"/>
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="com.google.android.wearable.standalone"
+                android:value="true" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
